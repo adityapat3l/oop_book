@@ -24,24 +24,24 @@ from .properties_payment import *
 
 
 
-# Properties Payment
-a1 = HouseRental.prompt_init()
-print(a1)
-
-house = HouseRental(**a1)
-house.display()
-
-
-# # Agent
-# agent = Agent()
-# agent.add_property()
+# # Properties Payment
+# a1 = HouseRental.prompt_init()
+# print(a1)
 #
-# response = get_valid_input("Would you like to add another property?: ",
-#                            ("yes", "no"))
-# while response == "yes":
-#     agent.add_property()
-#     response = get_valid_input("Would you like to add another property?: ",
-#                                ("yes", "no"))
-#
-#
-# agent.display_properties()
+# house = HouseRental(**a1)
+# house.display()
+
+
+# Agent
+agent = Agent()
+agent.add_property()
+
+response = get_valid_input("Would you like to add another property?: ",
+                           ("yes", "no"))
+while response == "yes":
+    agent.add_property()
+    response = get_valid_input("Would you like to add another property?: ",
+                               ("yes", "no"))
+
+
+agent.display_properties()
